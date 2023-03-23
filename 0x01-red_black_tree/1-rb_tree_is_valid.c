@@ -39,7 +39,7 @@ int isRedBlackTreeHelper(const rb_tree_t *node, int blackCount, int* numNodes)
 			blackCount = countBlackNodes(node);
 		}
 		else if (blackCount != countBlackNodes(node))
-		{ 	// black node count doesn't match
+		{ 	/* black node count doesn't match */
 			return (1);
 		}
 	}
