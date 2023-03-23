@@ -6,7 +6,7 @@ int countBlackNodes(const rb_tree_t *node) {
 
 	while (node != NULL)
 	{
-		if (node->color == 0) // black node
+		if (node->color == 0) /* black node */
 			blackCount++;
         }
         node = node->left;
@@ -49,14 +49,14 @@ int isRedBlackTreeHelper(const rb_tree_t *node, int blackCount, int* numNodes)
 }
 
 /* Returns true if the given binary tree is a valid Red-Black Tree */
-int rb_tree_is_valid(const rb_tree_t *root)
+int rb_tree_is_valid(const rb_tree_t *tree)
 {
 
 	int retval;
 
 	int blackCount = -1;
 	int numNodes = 0;
-	retval = isRedBlackTreeHelper(root, blackCount, &numNodes);
+	retval = isRedBlackTreeHelper(tree, blackCount, &numNodes);
 	
 	return (retval);
 }
