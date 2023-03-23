@@ -2,7 +2,7 @@
 
 /**
  * rb_tree_node - creates a Red-Black Tree node
- * 
+ *
  * @parent: pointer to the parent of the node to create
  * @value: the value to put into the new node
  * @color: the color of the node
@@ -14,7 +14,7 @@ rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color)
 
 	new_node = malloc(sizeof(rb_tree_t));
 	if (!new_node)
-		return NULL;
+		return (NULL);
 
 	new_node->n = value;
 	new_node->color = color;
