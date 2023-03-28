@@ -1,7 +1,7 @@
 #include "graphs.h"
 
 /**
- * make_egde - originates & initializes a new edge
+ * make_edge - originates & initializes a new edge
  *
  * @dest: vertex's destination
  * @source: the original vertex
@@ -25,7 +25,7 @@ int make_edge(vertex_t *source, vertex_t *dest)
 
 	new_edge->dest = dest;
 	new_edge->next = NULL;
-	
+
 	*edge_pointer = new_edge;
 
 	source->nb_edges += 1;
@@ -38,7 +38,7 @@ int make_edge(vertex_t *source, vertex_t *dest)
  *
  * @graph: pointer to the graph
  * @content: content of a vertex
- * Return: a pointer to our vertex or NULL 
+ * Return: a pointer to our vertex or NULL
  */
 vertex_t *find_vertex(graph_t *graph, const char *content)
 {
@@ -61,7 +61,8 @@ vertex_t *find_vertex(graph_t *graph, const char *content)
  * @type: the type of edge
  * Return: 1 on success, or 0 on failure
  **/
-int graph_add_edge(graph_t *graph, const char *src, const char *dest, edge_type_t type)
+int graph_add_edge(graph_t *graph, const char *src,
+	const char *dest, edge_type_t type)
 {
 	vertex_t *v_source, *v_dest;
 
