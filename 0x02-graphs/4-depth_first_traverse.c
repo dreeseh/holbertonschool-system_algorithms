@@ -64,7 +64,7 @@ size_t depth_first_traverse(const graph_t *graph,
 	max_depth = dft_helper(graph->vertices, visited, 0, action);
 
 	free(visited);
-	
+
 	return (max_depth);
 }
 
