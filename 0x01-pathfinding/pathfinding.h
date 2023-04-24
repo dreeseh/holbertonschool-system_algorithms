@@ -7,6 +7,7 @@
 #include "queues.h"
 #include "graphs.h"
 #include <string.h>
+#include <math.h>
 
 /* DATA STRUCTURES */
 /**
