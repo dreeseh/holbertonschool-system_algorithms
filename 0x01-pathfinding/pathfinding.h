@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "queues.h"
 #include "graphs.h"
+#include <string.h>
 
 /* DATA STRUCTURES */
 /**
