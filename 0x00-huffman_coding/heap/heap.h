@@ -2,7 +2,8 @@
 #define HEAP_H
 
 /* LIBRARIES */
-#include "../huffman.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /* DATA STRUCTURES */
 /**
@@ -42,7 +43,6 @@ binary_tree_node_t *heap_insert(heap_t *heap, void *data);
 void *heap_extract(heap_t *heap);
 void heap_delete(heap_t *heap, void (*free_data)(void *));
 
-heap_t *huffman_priority_queue(char *data, size_t *freq, size_t size);
 int huffman_extract_and_insert(heap_t *priority_queue);
 binary_tree_node_t *huffman_tree(char *data, size_t *freq, size_t size);
 int huffman_codes(char *data, size_t *freq, size_t size);
