@@ -1,7 +1,8 @@
 #include "huffman.h"
 #include "heap/heap.h"
+
 /**
-* leaf_symbol_cmp - compares two symbols that are leaves of independent trees
+* symbol_compare - compares two symbols that are leaves of independent trees
 * @node_a: node a
 * @node_b: node b
 *
@@ -21,6 +22,15 @@ int symbol_compare(void *node_a, void *node_b)
 	return (a->freq - b->freq);
 }
 
+/**
+ * huffman_priority_queue - creates a priority queue
+ * for the Huffman coding algorithm
+ *
+ * @data: the data
+ * @freq: the freq
+ * @size: the size
+ * Return: new heap_t*
+ */
 heap_t *huffman_priority_queue(char *data, size_t *freq, size_t size)
 {
 	size_t i = 0;
