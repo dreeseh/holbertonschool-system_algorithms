@@ -1,6 +1,36 @@
 #include "huffman.h"
 
 /**
+* data_cmp_huffman - get the subtration of data1 - data2
+* @data1: void pointer which store the data of the node1
+* @data2: void pointer which store the data of the node2
+* Return: the subtration of data1 - data2
+*/
+int data_cmp_huffman(void *data1, void *data2)
+{
+	size_t f1 = 0, f2 = 0;
+	binary_tree_node_t *data_node1 = NULL, *data_node2 = NULL;
+
+	data_node1 = (binary_tree_node_t *) data1;
+	data_node2 = (binary_tree_node_t *) data2;
+
+	if ((!data_node1 && data_node2) ||
+		(data_node1 && !data_node1->data && data_node2 && data_node2->data))
+		return (-1);
+	else if ((data_node1 && !data_node2) ||
+		(data_node1 && data_node1->data && data_node2 && !data_node2->data))
+		return (1);
+	else if ((!data_node1 && !data_node2) ||
+		(data_node1 && !data_node1->data && data_node2 && !data_node2->data))
+		return (0);
+
+	f1 = ((symbol_t *)data_node1->data)->freq;
+	f2 = ((symbol_t *)data_node2->data)->freq;
+
+	return (f1 - f2);
+}
+
+/**
  * print_symbol_code - print the symbol code compressed of a list of letters
  * @root: head of a huffman tree
  * @codes: code of a given letter
