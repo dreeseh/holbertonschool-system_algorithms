@@ -121,7 +121,8 @@ int floodFillMaze(queue_t *path, char **map, char **visited, int rows,
 	return (0);
 }
 /**
- * backtracking_array - searches for the first path from a starting point to a target point within a two-dimensional array
+ * backtracking_array - searches for the first path from
+ * starting point to a target point within an array
  *
  * @map: the pointer to a read-only two-dimensional array
  * @rows: number of rows in map
@@ -129,9 +130,11 @@ int floodFillMaze(queue_t *path, char **map, char **visited, int rows,
  * @start: stores the coordinates of the starting point
  * @target: stores the coordinates of the target point
  *
- * Return: a queue, in which each node is a point in the path from start to target
+ * Return: a queue, in which each node is
+ * a point in the path from start to target
  */
-queue_t *backtracking_array(char **map, int rows, int cols, point_t const *start, point_t const *target)
+queue_t *backtracking_array(char **map, int rows, int cols,
+			point_t const *start, point_t const *target)
 {
 	queue_t *path = NULL;
 	char **visited = NULL;
