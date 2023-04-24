@@ -161,4 +161,4 @@ void graph_delete(graph_t *graph);
  */
 void graph_display(graph_t const *graph);
 
-#endif /* !_GRAPHS_H_ */    
+#endif /* !_GRAPHS_H_ */
