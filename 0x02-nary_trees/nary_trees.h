@@ -33,6 +33,9 @@ void nary_tree_delete(nary_tree_t *tree);
 size_t nary_tree_traverse(nary_tree_t const *root,
 		void (*action)(nary_tree_t const *node, size_t depth));
 
+size_t max_depth_funct(nary_tree_t const *root, size_t current_depth,
+		void (*action)(nary_tree_t const *node, size_t depth));
+
 size_t nary_tree_diameter(nary_tree_t const *root);
 
 int path_exists(nary_tree_t const *root, char const * const *path);
