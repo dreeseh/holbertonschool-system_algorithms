@@ -7,7 +7,7 @@
  * @current_depth: current depth of the tree
  * @action: is executed for each node being traversed
  *
- * Return: the max depth of the nary tree 
+ * Return: the max depth of the nary tree
  */
 size_t max_depth_funct(nary_tree_t const *root, size_t current_depth,
 		void (*action)(nary_tree_t const *node, size_t depth))
@@ -35,7 +35,7 @@ size_t max_depth_funct(nary_tree_t const *root, size_t current_depth,
 /**
  * nary_tree_traverse - goes through an N-ary tree, node by node
  *
- * @root: root node of the nary tree 
+ * @root: root node of the nary tree
  * @action: is executed for each node being traversed
  *
  * Return: the biggest depth of the tree pointed to by root
